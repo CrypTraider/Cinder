@@ -1,0 +1,4 @@
+Cinder
+======
+
+Global Digital Currency
