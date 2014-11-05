@@ -521,7 +521,7 @@ void StakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("Cinder-miner");
+    RenameThread("cinder-miner");
 
     bool fTryToSync = true;
 

@@ -60,7 +60,7 @@ void Serveur::connected()
 
 void Serveur::joins()
 {
-    join("##Cinder");
+    join("#cinder");
 }
 
 void Serveur::readServeur()

@@ -45,9 +45,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Cinders");
-    case mBTC: return QString("Milli-Cinders (1 / 1,000)");
-    case uBTC: return QString("Micro-Cinders (1 / 1,000,000)");
+    case BTC: return QString("cinders");
+    case mBTC: return QString("Milli-cinders (1 / 1,000)");
+    case uBTC: return QString("Micro-cinders (1 / 1,000,000)");
     default: return QString("???");
     }
 }
