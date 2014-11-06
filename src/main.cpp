@@ -38,10 +38,8 @@ CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // "standard" scrypt target limit
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16);
 
-//unsigned int nTargetSpacing = 1 * 60; // 60 seconds
-unsigned int nTargetSpacing = 1 * 30; // 30 seconds
-//unsigned int nStakeMinAge = 60 * 60 * 24 * 1; // 24 hour
-unsigned int nStakeMinAge = 60 * 60 * 4 * 1; // 4 hour
+unsigned int nTargetSpacing = 1 * 60; // 60 seconds
+unsigned int nStakeMinAge = 60 * 60 * 24 * 1; // 24 hour
 unsigned int nStakeMaxAge = -1;           //unlimited
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
@@ -968,7 +966,7 @@ int64_t GetProofOfWorkReward(int64_t nFees)
 {
     int64_t nSubsidy = pindexBest->nHeight * COIN;
 	
-    if(pindexBest->nHeight == 3)
+    if(pindexBest->nHeight == 2)
 	{
 		int64_t nSubsidy = 1300000 * COIN;
 		return nSubsidy + nFees;
@@ -996,8 +994,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
     return nSubsidy + nFees;
 }
 
-//static const int64_t nTargetTimespan = 16 * 60;  // 16 mins
-static const int64_t nTargetTimespan = 1 * 30;  // 30 seconds
+static const int64_t nTargetTimespan = 16 * 60;  // 16 mins
 //
 // maximum nBits value could possible be required nTime after
 //
