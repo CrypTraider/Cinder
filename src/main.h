@@ -37,7 +37,7 @@ static const int64_t MIN_TX_FEE = 1000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64_t MAX_MONEY = 130000000 * COIN;
 static const int64_t COIN_YEAR_REWARD = 1 * CENT; // 1% per year
-static const int64_t MAX_MINT_PROOF_OF_STAKE = 0.10 * COIN;	// 2% annual interest
+static const int64_t MAX_MINT_PROOF_OF_STAKE = 0.10 * COIN;	// 10% annual interest
 static const int MODIFIER_INTERVAL_SWITCH = 15000;
 
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
@@ -126,14 +126,6 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan);
 const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfStake);
 void StakeMiner(CWallet *pwallet);
 void ResendWalletTransactions(bool fForce = false);
-
-
-
-
-
-
-
-
 
 
 bool GetWalletFile(CWallet* pwallet, std::string &strWalletFileOut);
