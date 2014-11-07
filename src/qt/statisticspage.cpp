@@ -91,30 +91,6 @@ void StatisticsPage::updateStatistics()
     ui->maxBox->setText(stakemax);
     }
 
-    if(phase != stakecPrevious)
-    {
-        ui->cBox->setText("<b><font color=\"green\">" + phase + "</font></b>");
-    } else {
-    ui->cBox->setText(phase);
-    }
-
-    
-    if(nSubsidy < rewardPrevious)
-    {
-        ui->rewardBox->setText("<b><font color=\"red\">" + subsidy + "</font></b>");
-    } else {
-    ui->rewardBox->setText(subsidy);
-    }
-    
-    if(pHardness > hardnessPrevious)
-    {
-        ui->diffBox->setText("<b><font color=\"green\">" + hardness + "</font></b>");        
-    } else if(pHardness < hardnessPrevious) {
-        ui->diffBox->setText("<b><font color=\"red\">" + hardness + "</font></b>");
-    } else {
-        ui->diffBox->setText(hardness);        
-    }
-
     if(pHardness2 > hardnessPrevious2)
     {
         ui->diffBox2->setText("<b><font color=\"green\">" + hardness2 + "</font></b>");
@@ -122,15 +98,6 @@ void StatisticsPage::updateStatistics()
         ui->diffBox2->setText("<b><font color=\"red\">" + hardness2 + "</font></b>");
     } else {
         ui->diffBox2->setText(hardness2);
-    }
-    
-    if(pPawrate2 > netPawratePrevious)
-    {
-        ui->pawrateBox->setText("<b><font color=\"green\">" + pawrate + " MH/s</font></b>");
-    } else if(pPawrate2 < netPawratePrevious) {
-        ui->pawrateBox->setText("<b><font color=\"red\">" + pawrate + " MH/s</font></b>");
-    } else {
-        ui->pawrateBox->setText(pawrate + " MH/s");
     }
 
     if(Qlpawrate != pawratePrevious)
