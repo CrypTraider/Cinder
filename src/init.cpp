@@ -91,7 +91,7 @@ void Shutdown(void* parg)
         delete pwalletMain;
         NewThread(ExitTimeout, NULL);
         MilliSleep(50);
-        printf("cinder exited\n\n");
+        printf("Cinder exited\n\n");
         fExit = true;
 #ifndef QT_GUI
         // ensure non-UI client gets exited here, but let Bitcoin-Qt reach 'return 0;' in bitcoin.cpp
@@ -146,7 +146,7 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("cinder version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("Cinder version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
                   "  cinderd [options]                     " + "\n" +
                   "  cinderd [options] <command> [params]  " + _("Send command to -server or cinderd") + "\n" +
@@ -519,7 +519,7 @@ bool AppInit2()
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("cinder version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
+    printf("Cinder version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
     printf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
     if (!fLogTimestamps)
         printf("Startup time: %s\n", DateTimeStrFormat("%x %H:%M:%S", GetTime()).c_str());
@@ -528,7 +528,7 @@ bool AppInit2()
     std::ostringstream strErrors;
 
     if (fDaemon)
-        fprintf(stdout, "cinder server starting\n");
+        fprintf(stdout, "Cinder server starting\n");
 
     int64_t nStart;
 

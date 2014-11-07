@@ -66,7 +66,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "cinder Signed Message:\n";
+const string strMessageMagic = "Cinder Signed Message:\n";
 
 // Settings
 int64_t nTransactionFee = MIN_TX_FEE;
